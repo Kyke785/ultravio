@@ -1,0 +1,252 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+    Name = "VIP PANEL 🎯",
+    LoadingTitle = "THIS IS SPECIAL VIP",
+    LoadingSubtitle = "by DARKz and @luacr",
+    ConfigurationSaving = {
+        Enabled = true,
+        FolderName = nil,
+        FileName = "PANEL"
+    },
+    Discord = {
+        Enabled = false,
+        Invite = "noinvitelink",
+        RememberJoins = true
+    },
+    KeySystem = true,
+    KeySettings = {
+        Title = "Key System",
+        Subtitle = "Enter your key to access",
+        Note = "KEY = OP",
+        FileName = "Key",
+        SaveKey = false,
+        GrabKeyFromSite = false,
+        Key = {"ULTRA787"}
+    }
+})
+
+local Tab = Window:CreateTab("MAIN PANEL ", 10729455663) -- Title, Image
+local Tab2 = Window:CreateTab("doors ", 10729455663) -- Title, Image
+local Tab3 = Window:CreateTab("BLADE BALL 🏀 ", 10729455663) -- Title, Image
+local Section = Tab:CreateSection("main")
+local Section2 = Tab2:CreateSection("door")
+local Section3 = Tab2:CreateSection("BLADE BALL")
+
+Rayfield:Notify({
+    Title = "WELCOME",
+    Content = "YOU'RE A VIP HACKER WITH THIS PANEL, THANKS!",
+    Duration = 6.5,
+    Image = 10729455663,
+    Actions = {
+        Ignore = {
+            Name = "Okay!",
+            Callback = function()
+                print("The user tapped Okay!")
+            end
+        }
+    },
+})
+
+local Toggle = Tab:CreateToggle({
+    Name = "FULLBRIGHT 💀",
+    CurrentValue = false,
+    Flag = "Toggle1",
+    Callback = function(Value)
+        if Value then
+           game:GetService("Lighting").Brightness = 2
+           game:GetService("Lighting").ClockTime = 14
+           game:GetService("Lighting").FogEnd = 100000
+           game:GetService("Lighting").GlobalShadows = false
+           game:GetService("Lighting").OutdoorAmbient = Color3.fromRGB(128, 128, 128)
+       else
+           game:GetService("Lighting").Brightness = 3
+           game:GetService("Lighting").ClockTime = 20
+           game:GetService("Lighting").FogEnd = 1.1111111533265e+16
+           game:GetService("Lighting").GlobalShadows = true
+           game:GetService("Lighting").OutdoorAmbient = Color3.fromRGB(0.5, 0.5, 0.5)
+       end
+   end
+})
+
+-- (Previous code continued...)
+
+local ButtonV12 = Tab:CreateButton({
+    Name = "protonv12",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Kyke785/PROTONV12/main/V12", true))()
+    end,
+})
+
+local ButtonV11 = Tab:CreateButton({
+    Name = "protonv11",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Kyke785/V11/main/HH", true))()
+    end,
+})
+
+local ButtonV10 = Tab:CreateButton({
+    Name = "protonv10",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Kyke785/V8/main/Beta", true))()
+    end,
+})
+
+local Label = Tab:CreateLabel("UPDATES ARE COMING FOR THIS VIP SUITE TOO")
+
+local Toggle2 = Tab2:CreateToggle({
+   Name = "FULL BRIGHTNESS DOORS",
+   CurrentValue = false,
+   Flag = "Toggle2",
+   Callback = function(Value)
+       if Value then
+           game:GetService("Lighting").Brightness = 2
+           game:GetService("Lighting").ClockTime = 14
+           game:GetService("Lighting").FogEnd = 100000
+           game:GetService("Lighting").GlobalShadows = false
+           game:GetService("Lighting").OutdoorAmbient = Color3.fromRGB(128, 128, 128)
+       else
+           game:GetService("Lighting").Brightness = 3
+           game:GetService("Lighting").ClockTime = 20
+           game:GetService("Lighting").FogEnd = 1.1111111533265e+16
+           game:GetService("Lighting").GlobalShadows = true
+           game:GetService("Lighting").OutdoorAmbient = Color3.fromRGB(0.5, 0.5, 0.5)
+       end
+   end
+})
+
+-- Similar modifications and corrections needed for the other Toggles, Slider, etc.
+
+local Toggle3 = Tab2:CreateToggle({
+   Name = "key esp",
+   CurrentValue = false,
+   Flag = "Toggle3",
+   Callback = function(Value)
+       keyesp = value
+       if keyesp then
+           repeat task.wait(.25)
+               for i,v in pairs(bullshittable.KeyObtain) do
+                   pcall(function()
+                       if not v.Parent:FindFirstChild("Outline") then
+                           if keyesp then
+                               outline(v.Parent)
+                           end
+                       end
+                   end)
+               end
+           until not keyesp
+       else
+           for i,v in pairs(bullshittable.KeyObtain) do
+               pcall(function()
+                   v.Parent.Outline:Destroy()
+               end)
+           end
+       end
+   end
+}) 
+
+local Toggle4 = Tab2:CreateToggle({
+   Name = "lever esp",
+   CurrentValue = false,
+   Flag = "Toggle4",
+   Callback = function(Value)
+       leveresp = value
+       if leveresp then
+           repeat task.wait(.25)
+               for i,v in pairs(bullshittable.LeverForGate) do
+                   pcall(function()
+                       if not v.Parent:FindFirstChild("Outline") then
+                           if leveresp then
+                               outline(v.Parent)
+                           end
+                       end
+                   end)
+               end
+           until not leveresp
+       else
+           for i,v in pairs(bullshittable.LeverForGate) do
+               pcall(function()
+                   v.Parent.Outline:Destroy()
+               end)
+           end
+       end
+   end
+})
+
+-- Creating the book ESP toggle
+local Toggle5 = Tab2:CreateToggle({
+   Name = "BOOK ESP",
+   CurrentValue = false,
+   Flag = "Toggle5",
+   Callback = function(Value)
+       bookesp = value
+       if bookesp then
+           repeat task.wait(.25)
+               for i,v in pairs(bullshittable.LiveHintBook) do
+                   pcall(function()
+                       if not v.Parent:FindFirstChild("Outline") then
+                           if bookesp then
+                               outline(v.Parent)
+                           end
+                       end
+                   end)
+               end
+           until not bookesp
+       else
+           for i,v in pairs(bullshittable.LiveHintBook) do
+               pcall(function()
+                   v.Parent.Outline:Destroy()
+               end)
+           end
+       end
+   end
+})
+
+-- Creating the slider for walk speed
+local Slider2 = Tab2:CreateSlider({
+   Name = "WALKSPEED(patched)",
+   Range = {0, 100},
+   Increment = 10,
+   Suffix = "NOT WORKING",
+   CurrentValue = 10,
+   Flag = "Slider2",
+   Callback = function(Value)
+       getgenv().ws = value
+   end
+})
+
+task.spawn(function()
+   while task.wait() do
+       if getgenv().wstog then
+           game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = getgenv().ws
+       end
+   end
+end)
+
+local Label = Tab2:CreateLabel("CREDIT-DOORS SCRIPT MADE BY @luascr")
+
+local Label = Tab2:CreateLabel("Doors helping script - DARKz team in discord")
+
+local Button = Tab3:CreateButton({
+   Name = "BLADE ball 🏀 script",
+   Callback = function()
+getgenv().config = getgenv().config or {
+	hit_time = 0.5, -- // recommended 0.25 to 0.75 \\ --
+	
+	mode = 'Always', -- // Hold , Toggle , Always \\ --
+	deflect_type = 'Remote', -- // Key Press , Remote \\ --
+	notifications = true,
+	keybind = Enum.KeyCode.V
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3ABlade%20Ball%20Parry%20V4.0.0",true))()
+   end,
+})
+
+local Label = Tab3:CreateLabel("CREDITS-------<")
+
+local Label = Tab3:CreateLabel("~Ui by Rayfield")
+
+local Label = Tab3:CreateLabel("~gui made by @luascr on YouTube")
+
+local Label = Tab3:CreateLabel("~scripting help by DARKz team on discord")
